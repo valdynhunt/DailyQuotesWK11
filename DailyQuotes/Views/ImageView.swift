@@ -34,7 +34,7 @@ import SwiftUI
 
 struct ImageView: View {
   let image: UIImage
-
+  
   var body: some View {
     Image(uiImage: image)
       .resizable()

@@ -34,12 +34,12 @@ import SwiftUI
 
 @main
 struct MyApp: App {
-    @StateObject var networkMonitor = NetworkMonitor()
-
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .environmentObject(networkMonitor)
-        }
+  @StateObject var networkMonitor = NetworkMonitor()
+  
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
+        .environmentObject(networkMonitor)
     }
+  }
 }

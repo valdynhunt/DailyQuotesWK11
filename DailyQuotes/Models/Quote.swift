@@ -33,19 +33,19 @@
 import Foundation
 
 struct Quote: Codable, Identifiable {
-    let id = UUID()
-    let author: String?
-    let text: String?
-
-    enum CodingKeys: String, CodingKey {
-        case author
-        case text = "quote"
-    }
-
-    static var example: Quote {
-        Quote(
-            author: "Steve Jobs",
-            text: "The people who are crazy enough to think they can change the world are the ones who do."
-        )
-    }
+  let id = UUID()
+  let author: String?
+  let text: String?
+  
+  enum CodingKeys: String, CodingKey {
+    case author
+    case text = "quote"
+  }
+  
+  static var example: Quote {
+    Quote(
+      author: "Steve Jobs",
+      text: "The people who are crazy enough to think they can change the world are the ones who do."
+    )
+  }
 }

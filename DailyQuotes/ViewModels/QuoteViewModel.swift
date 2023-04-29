@@ -38,7 +38,7 @@ class QuoteViewModel: ObservableObject {
   var decoder = JSONDecoder()
   
   func getQuotes() async throws {
-
+    
     let configuration = URLSessionConfiguration.default
     configuration.timeoutIntervalForRequest = 5
     let session = URLSession(configuration: configuration)

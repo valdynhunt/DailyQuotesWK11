@@ -37,52 +37,52 @@ struct ContentView: View {
   @StateObject var quoteViewModel = QuoteViewModel()
   @StateObject var imageViewModel = ImageViewModel()
   @EnvironmentObject var networkMonitor: NetworkMonitor
-
-    var body: some View {
-            if networkMonitor.isConnected {
-              GeometryReader { geometry in
-                ZStack {
-                  Color.white
-                    .edgesIgnoringSafeArea(.all)
-                  VStack(spacing: 0) {
-                    VStack(alignment: .center) {
-                      Text(Constants.Text.appTitle)
-                        .font(.largeTitle)
-                        .foregroundColor(.mint)
-                        .bold()
-                      Text(Constants.Text.appSubtitle)
-                        .font(.title)
-                        .foregroundColor(.mint)
-                    }
-                    .padding(.horizontal)
-                    
-                    ImageView(image: imageViewModel.image)
-                      .frame(
-                        width: geometry.size.width * 0.5,
-                        height: geometry.size.height * 0.2
-                      )
-                      .cornerRadius(10)
-                      .padding(30)
-                    QuoteView(quote: quoteViewModel.quote)
-                      .frame(
-                        width: geometry.size.width * 0.9,
-                        height: geometry.size.height * 0.5
-                      )
-                      .onTapGesture {
-                        Task {
-                          try await quoteViewModel.getQuotes()
-                          try await imageViewModel.getImage()
-                        }
-                      }
-                  }
-                }
-                Spacer()
-              }
-              
-            } else {
-                NoNetworkView()
+  
+  var body: some View {
+    if networkMonitor.isConnected {
+      GeometryReader { geometry in
+        ZStack {
+          Color.white
+            .edgesIgnoringSafeArea(.all)
+          VStack(spacing: 0) {
+            VStack(alignment: .center) {
+              Text(Constants.Text.appTitle)
+                .font(.largeTitle)
+                .foregroundColor(.mint)
+                .bold()
+              Text(Constants.Text.appSubtitle)
+                .font(.title)
+                .foregroundColor(.mint)
             }
-     }
+            .padding(.horizontal)
+            
+            ImageView(image: imageViewModel.image)
+              .frame(
+                width: geometry.size.width * 0.5,
+                height: geometry.size.height * 0.2
+              )
+              .cornerRadius(10)
+              .padding(30)
+            QuoteView(quote: quoteViewModel.quote)
+              .frame(
+                width: geometry.size.width * 0.9,
+                height: geometry.size.height * 0.5
+              )
+              .onTapGesture {
+                Task {
+                  try await quoteViewModel.getQuotes()
+                  try await imageViewModel.getImage()
+                }
+              }
+          }
+        }
+        Spacer()
+      }
+      
+    } else {
+      NoNetworkView()
+    }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {

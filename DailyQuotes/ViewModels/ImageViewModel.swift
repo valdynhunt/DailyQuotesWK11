@@ -37,7 +37,7 @@ import Combine
 class ImageViewModel: ObservableObject {
   @Published var image = UIImage(named: Constants.Image.logo) ?? UIImage()
   var session = URLSession.shared
-
+  
   func getImage() async throws {
     
     guard let url = URL(string: Constants.URL.image) else {
@@ -84,7 +84,7 @@ class ImageViewModel: ObservableObject {
       }
       
       self.image = UIImage(data: data) ?? UIImage(named: Constants.Image.logo) ?? UIImage()
-
+      
     }
   }
 }

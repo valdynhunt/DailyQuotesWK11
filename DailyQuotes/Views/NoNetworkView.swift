@@ -33,23 +33,23 @@
 import SwiftUI
 
 struct NoNetworkView: View {
-    var body: some View {
-      VStack {
-        Spacer()
-        Text("No network connection\nPlease check your network")
-          .multilineTextAlignment(.center)
-          .padding(.bottom)
-        Image(systemName: "wifi.slash")
-          .resizable()
-          .frame(width: 30, height: 30)
-          .foregroundColor(Color.red)
-        Spacer()
-      }
+  var body: some View {
+    VStack {
+      Spacer()
+      Text("No network connection\nPlease check your network")
+        .multilineTextAlignment(.center)
+        .padding(.bottom)
+      Image(systemName: "wifi.slash")
+        .resizable()
+        .frame(width: 30, height: 30)
+        .foregroundColor(Color.red)
+      Spacer()
     }
+  }
 }
 
 struct NoNetworkView_Previews: PreviewProvider {
-    static var previews: some View {
-        NoNetworkView()
-    }
+  static var previews: some View {
+    NoNetworkView()
+  }
 }
