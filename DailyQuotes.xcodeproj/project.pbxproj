@@ -13,6 +13,7 @@
 		18D775CA22AD944400AE281E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C922AD944400AE281E /* Preview Assets.xcassets */; };
 		18D775D822AD963800AE281E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D775DA22AD963800AE281E /* LaunchScreen.storyboard */; };
 		2330423629FD84DA0096A545 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330423529FD84DA0096A545 /* Error.swift */; };
+		2330423929FD85790096A545 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330423829FD85790096A545 /* NetworkMonitor.swift */; };
 		EAF0292828A8586900394064 /* QuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF0292728A8586900394064 /* QuoteViewModel.swift */; };
 		EAF0292A28A8587E00394064 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF0292928A8587E00394064 /* Quote.swift */; };
 		EAF0292C28A858A600394064 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF0292B28A858A600394064 /* ImageViewModel.swift */; };
@@ -30,6 +31,7 @@
 		18D775CE22AD944400AE281E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D775DE22AD96B400AE281E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2330423529FD84DA0096A545 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		2330423829FD85790096A545 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		EAF0292728A8586900394064 /* QuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewModel.swift; sourceTree = "<group>"; };
 		EAF0292928A8587E00394064 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		EAF0292B28A858A600394064 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				EAF0292928A8587E00394064 /* Quote.swift */,
+				2330423829FD85790096A545 /* NetworkMonitor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				EAF0292828A8586900394064 /* QuoteViewModel.swift in Sources */,
 				18D775C522AD944300AE281E /* ContentView.swift in Sources */,
 				1839F4B025190F2A00BB00F1 /* AppMain.swift in Sources */,
+				2330423929FD85790096A545 /* NetworkMonitor.swift in Sources */,
 				2330423629FD84DA0096A545 /* Error.swift in Sources */,
 				EAF0293228A94C6C00394064 /* Constants.swift in Sources */,
 			);
