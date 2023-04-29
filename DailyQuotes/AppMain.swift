@@ -33,10 +33,13 @@
 import SwiftUI
 
 @main
-struct AppMain: App {
-  var body: some Scene {
-    WindowGroup {
-      ContentView()
+struct MyApp: App {
+    @StateObject var networkMonitor = NetworkMonitor()
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .environmentObject(networkMonitor)
+        }
     }
-  }
 }
