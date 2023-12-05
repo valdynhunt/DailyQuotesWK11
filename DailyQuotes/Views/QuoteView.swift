@@ -52,7 +52,7 @@ struct QuoteView: View {
           .scaledToFit()
           .foregroundColor(.gray)
       }
-      .padding(8)
+      .padding(7)
       .multilineTextAlignment(.center)
     }
   }
@@ -63,3 +63,5 @@ struct QuoteView_Previews: PreviewProvider {
     QuoteView(quote: Quote.example)
   }
 }
+
+// yo
